@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+}
+
+
+.weather-card{
+    background-image: url('./components/img/photo2.webp')  ;
+    width: 90%;
+    max-width: 500px;
+    padding: 40px;
+    margin: 40px;
+    border-radius: 2px;
+    box-shadow: 0 0 50px rgba(0,0,0,.1);
+}
+
+.button {
+  background: #83d394;
+  display: inline-block;
+  padding: 20px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  transition: .3s ease all;
+  color: #000;
+}
+
+.button:hover {
+  background: #44a559;
+  color: #fff;  
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;  
+  list-style: none;
+  
+}
+
+*{
+  color: #fff;
+}
+
+.get-location-btn{
+  background: #83d394;
+  display: inline-block;
+  padding: 20px;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  transition: .3s ease all;
+  color: #000;
+}
+
+.get-location-btn:hover {
+  background: #44a559;
+  color: #fff;
+}
+
+.gb-img{
+
+}

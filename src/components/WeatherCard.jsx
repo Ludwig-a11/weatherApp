@@ -30,7 +30,7 @@ const WeatherCard = () => {
       const url = `https://api.openweathermap.org/data/2.5/weather?lat=${obj?.lat}&lon=${obj?.lon}&appid=${API_KEY}`
       axios.get(url)
         .then(res => setObj(res.data))
-        .catch(err => (err))
+        .catch(err => (console.log(err)))
     }
   }, [obj])
 
@@ -45,17 +45,19 @@ const WeatherCard = () => {
     
     }
 
+    console.log(obj);
+
   return (
     <div className='weather-card'>
         
         
         <h1>WeatherApp</h1>
         <div className='weather-info'>
-            <h3>City: {obj?.name}, Méx</h3>
+            <h3><i class="fa-solid fa-map-location-dot"></i> City: {obj?.name} {obj?.sys?.country}</h3>
             <ul>
-                <li><b>Weather:</b> {obj?.weather?.[0]?.description} </li>
-                <li><b>Clouds:</b> {obj?.clouds?.all} %</li>
-                <li className='temp'><b>Temperature:  </b> {obj?.main?.temp}</li>
+                <li><i class="fa-solid fa-cloud-sun fa-lg"></i> <b>Weather:</b> {obj?.weather?.[0]?.description} </li>
+                <li>{<i class="fa-solid fa-cloud"></i>} <b>Clouds:</b> {obj?.clouds?.all} %</li>
+                <li className='temp'><i class="fa-solid fa-temperature-empty fa-lg"></i> <b>Temperature:  </b> {obj?.main?.temp}</li>
             </ul>
         </div>
        
